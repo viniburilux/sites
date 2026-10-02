@@ -1,27 +1,95 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Magia das Patas Pet Shop | Demonstração de site</title>
+<title>Magia das Patas | Prévia de site</title>
 <meta name="robots" content="noindex">
+<meta name="description" content="Pet shop em Salvador. Prévia de site feita com dados públicos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1c1c1c;background:#fafafa;line-height:1.5}
-main{max-width:640px;margin:0 auto;padding:32px 20px 48px}
-.tag{display:inline-block;background:#fff3cd;color:#664d03;border-radius:6px;padding:4px 10px;font-size:13px;margin-bottom:16px}
-h1{font-size:32px;margin:0 0 4px}.kind{color:#2f7d6d;font-weight:600;margin:0 0 20px}
-h2{font-size:20px;margin:32px 0 8px}
-dl{margin:0;background:#fff;border:1px solid #e4e4e4;border-radius:10px;padding:4px 16px}
-dl div{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eee}dl div:last-child{border:0}
-dt{width:150px;color:#666;flex:none}dd{margin:0}
-.btn{display:block;text-align:center;background:#1f9d55;color:#fff;text-decoration:none;font-weight:600;padding:16px;border-radius:10px;margin-top:20px;font-size:18px}
-.ph{background:#fff;border:1px dashed #bbb;border-radius:10px;padding:14px 16px;color:#555}
-footer{margin-top:36px;font-size:13px;color:#777}
-</style></head><body><main>
-<span class="tag">Demonstração gratuita, ainda não é o site final</span>
-<h1>Magia das Patas Pet Shop</h1><p class="kind">Pet shop em Salvador</p>
-<p>Esta é uma prévia de como ficaria o site de vocês, usando só o que já é público no Google.</p>
-<a class="btn" href="https://wa.me/5571992039177">Chamar no WhatsApp</a>
-<h2>Contato</h2>
-<dl><div><dt>Telefone / WhatsApp</dt><dd>(71) 99203-9177</dd></div><div><dt>Cidade</dt><dd>Salvador, BA</dd></div><div><dt>Bairro</dt><dd>Pituba</dd></div><div><dt>Avaliação no Google</dt><dd>5,0 de 5 (75 avaliações)</dd></div></dl>
-<h2>Serviços</h2><div class="ph">[Lista de serviços e preços: a confirmar com vocês]</div>
-<h2>Horário e endereço</h2><div class="ph">[Horário de funcionamento e endereço: a confirmar com vocês]</div>
-<footer>Prévia feita por Vinicius, de Salvador. Dados públicos da ficha do Google Maps. Serviços, horários e fotos a confirmar.</footer>
-</main></body></html>
+:root{--bg:#faf6ff;--bg2:#efe6fb;--card:#ffffff;--ink:#2a1f45;--mut:#6f6590;--acc:#7a4dd8;--acc2:#ff9f4a;--on:#ffffff;--line:#e4d9f5;--h:Fredoka,system-ui,sans-serif;--b:Nunito,system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--b);background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--h);line-height:1.1;margin:0}
+a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:var(--acc);color:var(--on);text-align:center;font-size:13px;padding:7px 12px;font-weight:600}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.brand{font-family:var(--h);font-weight:700;font-size:19px;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--on);text-decoration:none;font-weight:700;padding:14px 22px;border-radius:999px;font-size:16px;box-shadow:0 8px 24px -10px var(--acc);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.sm{padding:9px 16px;font-size:14px;box-shadow:none}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+.hero{background:radial-gradient(900px 400px at 85% 0%,color-mix(in srgb,var(--acc) 22%,transparent),transparent),var(--bg);padding:48px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--acc);margin-bottom:14px}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:700}.hero h1 em{font-style:italic;color:var(--acc)}
+.hero p.sub{font-size:18px;color:var(--mut);max-width:30em;margin:18px 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.badge{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px}
+.badge b{font-size:20px;font-family:var(--h)}.badge small{color:var(--mut)}
+.stars{--p:90%;display:inline-block;width:88px;height:16px;background:linear-gradient(90deg,var(--acc2) var(--p),color-mix(in srgb,var(--mut) 30%,transparent) var(--p));-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='16' viewBox='0 0 88 16'%3E%3Cg fill='%23000'%3E%3Cpath id='s' d='m8 0 2.400 5 5.600.7-4 3.800 1 5.500L8 12.400 3 15l1-5.500-4-3.800L5.600 5z'/%3E%3Cuse href='%23s' x='17.600'/%3E%3Cuse href='%23s' x='35.200'/%3E%3Cuse href='%23s' x='52.800'/%3E%3Cuse href='%23s' x='70.400'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/100% 100%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='16' viewBox='0 0 88 16'%3E%3Cg fill='%23000'%3E%3Cpath id='s' d='m8 0 2.400 5 5.600.7-4 3.800 1 5.500L8 12.400 3 15l1-5.500-4-3.800L5.600 5z'/%3E%3Cuse href='%23s' x='17.600'/%3E%3Cuse href='%23s' x='35.200'/%3E%3Cuse href='%23s' x='52.800'/%3E%3Cuse href='%23s' x='70.400'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/100% 100%}
+section{padding:60px 0}section.alt{background:var(--bg2)}
+.kick{color:var(--acc);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:8px}.lead{color:var(--mut);max-width:36em;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
+.sv .ic{width:34px;height:34px;color:var(--acc);margin-bottom:14px}.sv h3{font-size:20px;margin-bottom:6px}.sv p{margin:0;color:var(--mut);font-size:15px}
+.note{display:inline-block;margin-top:18px;font-size:13px;color:var(--mut);background:var(--card);border:1px dashed var(--mut);border-radius:10px;padding:8px 12px}
+.rate{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.big{font-family:var(--h);font-size:84px;font-weight:700;line-height:1;color:var(--acc)}
+.rate p{margin:6px 0 0;color:var(--mut)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.info .card h3{font-size:18px;margin-bottom:10px}.info p{margin:6px 0}
+.tbc{display:inline-block;font-size:13px;color:var(--mut);background:var(--bg2);border-radius:6px;padding:2px 8px;margin-left:4px}
+.mapc iframe{width:100%;height:240px;border:0;border-radius:12px;background:var(--bg2)}
+.final{background:var(--acc);color:var(--on);text-align:center;padding:64px 0}
+.final h2{margin-bottom:10px}.final p{opacity:.9;margin:0 0 26px}
+.final .btn{background:var(--on);color:var(--acc);box-shadow:none}
+footer{padding:28px 0 110px;font-size:13px;color:var(--mut);text-align:center}
+.wa{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:14px 20px 14px 16px;box-shadow:0 10px 30px -8px rgba(0,0,0,.45)}
+.art{position:relative;aspect-ratio:1/1;max-width:420px;margin:0 auto;width:100%}
+.art-pole{display:flex;align-items:center;justify-content:center;gap:22px;background:radial-gradient(circle at 50% 40%,#25232a,transparent 70%);border-radius:28px;border:1px solid var(--line)}
+.pole{width:56px;height:78%;border-radius:28px;border:3px solid var(--acc2);overflow:hidden;background:#fff;box-shadow:0 0 40px -6px var(--acc)}
+.pole i{display:block;width:100%;height:100%;background:repeating-linear-gradient(-45deg,#d63a3a 0 18px,#fff 18px 36px,#2f5bd0 36px 54px,#fff 54px 72px);background-size:100% 102px;animation:spin 3s linear infinite}
+@keyframes spin{to{background-position:0 102px}}
+.plaque{border:2px solid var(--acc);border-radius:16px;padding:24px 18px;text-align:center;font-family:var(--h);color:var(--acc2);display:grid;gap:6px}
+.plaque span{font-size:13px;letter-spacing:.3em;text-transform:uppercase}.plaque b{font-size:24px}
+.art-salon{border-radius:50% 50% 24px 24px/40% 40% 24px 24px;background:linear-gradient(160deg,var(--acc2),color-mix(in srgb,var(--acc) 70%,#fff));overflow:hidden;display:flex;align-items:center;justify-content:center}
+.mirror{width:62%;aspect-ratio:3/4;border-radius:999px;background:rgba(255,255,255,.35);border:6px solid rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;color:#fff;backdrop-filter:blur(4px)}
+.mirror svg{width:44%}.orb{position:absolute;border-radius:50%;background:rgba(255,255,255,.28)}
+.o1{width:90px;height:90px;left:8%;top:12%}.o2{width:50px;height:50px;right:10%;top:22%}.o3{width:120px;height:120px;right:-20px;bottom:-10px}
+.art-pet{border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,var(--acc2),var(--acc));overflow:hidden}
+.paw{width:46%;fill:#fff;filter:drop-shadow(0 8px 14px rgba(0,0,0,.2))}
+.moon{position:absolute;width:26%;aspect-ratio:1;border-radius:50%;right:16%;top:12%;box-shadow:inset -14px 0 0 0 #fff;opacity:.9}
+.sp{position:absolute;width:14px;height:14px;background:#fff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.s1{left:16%;top:22%}.s2{left:24%;bottom:18%;width:20px;height:20px}.s3{right:14%;bottom:26%;width:10px;height:10px}
+.vcross{position:absolute;right:15%;bottom:15%;width:22%;aspect-ratio:1;background:#fff;color:var(--acc);border-radius:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.3)}.vcross .ic{width:60%;height:60%}
+.leafbg{position:absolute;inset:0;background:radial-gradient(circle at 15% 85%,rgba(255,255,255,.18) 0 22%,transparent 23%),radial-gradient(circle at 90% 10%,rgba(255,255,255,.14) 0 20%,transparent 21%)}
+@media(max-width:820px){
+ .hero{padding:28px 0 40px}.hero .wrap{grid-template-columns:1fr}.art{max-width:280px;order:-1}
+ .grid{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr}.big{font-size:64px}
+ section{padding:44px 0}.brand{font-size:16px}.btn.sm span.t{display:none}
+}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.cta .btn{width:100%;justify-content:center}.wa span{display:none}.wa{padding:14px}}
+@media(prefers-reduced-motion:reduce){.pole i{animation:none}}
+</style></head><body>
+<div class="demo">Prévia de demonstração. Serviços, horários e fotos são exemplos a confirmar.</div>
+<header class="top"><div class="wrap"><span class="brand">Magia das Patas</span><a class="btn sm" href="https://wa.me/5571992039177?text=Oi%21%20Vi%20o%20site%20da%20Magia%20das%20Patas%20e%20queria%20saber%20mais."><span class="t">Falar no </span>WhatsApp</a></div></header>
+<main>
+<div class="hero"><div class="wrap">
+ <div><span class="eyebrow">Pet shop · Pituba</span><h1>Onde seu pet<br>vira <em>mágica.</em></h1><p class="sub">Carinho, cuidado e muita pata feliz, na Pituba. Chame no WhatsApp e fale com a loja.</p>
+  <div class="cta"><a class="btn" href="https://wa.me/5571992039177?text=Oi%21%20Vi%20o%20site%20da%20Magia%20das%20Patas%20e%20queria%20saber%20mais."><svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.400 8.600 3.400 15.500c0 2.300.6 4.400 1.700 6.300L3 29l7.400-1.900a12.500 12.500 0 0 0 5.600 1.300c6.900 0 12.600-5.600 12.600-12.500S22.900 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.200 5.200 16 5.200s10.600 4.600 10.600 10.300S21.800 25.800 16 25.800zm5.800-7.600c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.300-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3 1.200 3 .8 3.600.8.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>Chamar no WhatsApp</a><a class="btn ghost" href="#local">Como chegar</a></div>
+  <div class="badge"><span class="stars" style="--p:100%" role="img" aria-label="5,0 de 5"></span><b>5,0</b><small>75 avaliações no Google</small></div></div>
+ <div class="art art-pet magic"><div class="moon"></div><svg viewBox="0 0 64 64" class="paw" aria-hidden="true"><ellipse cx="32" cy="42" rx="14" ry="11"/><ellipse cx="15" cy="27" rx="6" ry="8" transform="rotate(-20 15 27)"/><ellipse cx="27" cy="16" rx="6" ry="8" transform="rotate(-6 27 16)"/><ellipse cx="40" cy="16" rx="6" ry="8" transform="rotate(6 40 16)"/><ellipse cx="51" cy="27" rx="6" ry="8" transform="rotate(20 51 27)"/></svg><span class="sp s1"></span><span class="sp s2"></span><span class="sp s3"></span></div>
+</div></div>
+<section class="alt" id="servicos"><div class="wrap"><div class="kick">Serviços</div><h2>O que o pet shop pode oferecer</h2><p class="lead">Lista de exemplo para mostrar como ficaria o site. A lista real e os preços entram depois, com os dados do negócio.</p>
+ <div class="grid"><div class="card sv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 5 7 8 7 12a7 7 0 0 1-14 0c0-4 3-7 7-12z"/></svg><h3>Banho e tosa</h3><p>Higiene e visual novo para o seu pet.</p></div><div class="card sv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a3 3 0 1 1 3-3l2 2 3 3a3 3 0 1 1 3 3l-5-5-6 6a3 3 0 1 1-3-3z"/></svg><h3>Petiscos e ração</h3><p>Alimentação e mimos.</p></div><div class="card sv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 13H6z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><h3>Acessórios</h3><p>Coleiras, roupinhas e brinquedos.</p></div><div class="card sv"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21C5 15 3 12 3 8.500A4.500 4.500 0 0 1 12 6a4.500 4.500 0 0 1 9 2.500C21 12 19 15 12 21z"/></svg><h3>Cuidado com carinho</h3><p>Atendimento próximo para você e seu pet.</p></div></div><span class="note">Exemplo ilustrativo. Serviços e preços a confirmar com o negócio.</span></div></section>
+<section id="avaliacao"><div class="wrap"><div class="kick">Avaliação</div><h2>Quem já foi, avaliou</h2><p class="lead">Nota pública da ficha do negócio no Google Maps.</p>
+ <div class="card rate"><div class="big">5,0</div><div><span class="stars" style="--p:100%" role="img" aria-label="5,0 de 5"></span><p><b>75 avaliações</b> no Google Maps</p></div></div></div></section>
+<section class="alt" id="local"><div class="wrap"><div class="kick">Contato e localização</div><h2>Venha conhecer</h2><p class="lead">Fale com o negócio e confira a localização no mapa.</p>
+ <div class="info"><div class="card"><h3>Contato</h3><p><b>WhatsApp:</b> (71) 99203-9177</p><p><b>Local:</b> <b>Pituba</b>, Salvador, BA</p><p><b>Horário:</b> <span class="tbc">a confirmar</span></p></div>
+ <div class="card mapc"><h3>Mapa</h3><iframe title="Mapa: Magia das Patas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Magia%20das%20Patas%20Salvador%20BA&output=embed&hl=pt-BR"></iframe><p><a class="btn sm" href="https://www.google.com/maps/search/?api=1&query=Magia%20das%20Patas%20Salvador%20BA" target="_blank" rel="noopener">Abrir no Maps</a></p></div></div></div></section>
+<div class="final"><div class="wrap"><h2>Seu pet merece o melhor.</h2><p>Fale com a loja e combine banho, tosa ou compras.</p><a class="btn" href="https://wa.me/5571992039177?text=Oi%21%20Vi%20o%20site%20da%20Magia%20das%20Patas%20e%20queria%20saber%20mais."><svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.400 8.600 3.400 15.500c0 2.300.6 4.400 1.700 6.300L3 29l7.400-1.900a12.500 12.500 0 0 0 5.600 1.300c6.900 0 12.600-5.600 12.600-12.500S22.900 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.200 5.200 16 5.200s10.600 4.600 10.600 10.300S21.800 25.800 16 25.800zm5.800-7.600c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.300-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3 1.200 3 .8 3.600.8.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg>Chamar no WhatsApp</a></div></div>
+</main>
+<footer><div class="wrap">Prévia feita por Vinicius, de Salvador, com dados públicos da ficha do Google Maps. Serviços, horários e fotos a confirmar.</div></footer>
+<a class="wa" href="https://wa.me/5571992039177?text=Oi%21%20Vi%20o%20site%20da%20Magia%20das%20Patas%20e%20queria%20saber%20mais." aria-label="Chamar no WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.400 8.600 3.400 15.500c0 2.300.6 4.400 1.700 6.300L3 29l7.400-1.900a12.500 12.500 0 0 0 5.600 1.300c6.900 0 12.600-5.600 12.600-12.500S22.900 3 16 3zm0 22.800c-1.800 0-3.600-.5-5.100-1.400l-.4-.2-4.400 1.100 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.400 9.800 10.200 5.200 16 5.200s10.600 4.600 10.600 10.300S21.800 25.800 16 25.800zm5.800-7.600c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.200-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.300-.2-.3 0-.5.100-.7l.5-.5c.1-.2.200-.3.300-.5.100-.2.100-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1 1-1 2.500s1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.500 3 1.200 3 .8 3.600.8.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500-.1-.2-.3-.2-.6-.4z"/></svg><span>WhatsApp</span></a>
+</body></html>
